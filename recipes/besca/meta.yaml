@@ -1,0 +1,29 @@
+{% set version="2.4" %}
+
+package:
+  name: besca
+  version: {{ version }}
+
+source:
+  url: https://github.com/bedapub/besca/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 2c889b2c139c55dce624a2712c4ff85da218f6831b70f800b707576a6cf1d9f0
+
+build:
+  number: 0
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  host:
+  - python >=3.8
+  - pip
+  run:
+  - python >=3.8
+
+
+about:
+  home: https://github.com/bedapub/besca
+  license: GNU GENERAL PUBLIC LICENSE Version 3
+  license_family: GPL3
+  license_file: LICENSE
+  summary: "test"
